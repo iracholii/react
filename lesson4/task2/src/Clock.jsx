@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import moment from 'moment';
 import './clock.scss';
 
 const getTimeWithOffset = (offset) => {
@@ -14,11 +15,13 @@ class Clock extends Component {
     super(props);
     this.state = {
       location: props.location,
-      time: getTimeWithOffset(props.offset).toLocaleTimeString(),
+      //   time: getTimeWithOffset(props.offset).toLocaleTimeString(),
+      time: moment(getTimeWithOffset(props.offset)).format('LTS'),
     };
     setInterval(() => {
       this.setState({
-        time: getTimeWithOffset(props.offset).toLocaleTimeString(),
+        // time: getTimeWithOffset(props.offset).toLocaleTimeString(),
+        time: moment(getTimeWithOffset(props.offset)).format('LTS'),
       });
     }, 1000);
   }
