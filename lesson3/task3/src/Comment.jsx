@@ -6,7 +6,7 @@ import moment from 'moment';
 const formatDate = (date) => moment(date).format('DD MMM YYYY');
 
 function Comment(props) {
-  console.log(props);
+  // console.log(props);
 
   return (
     <div className="comment">
