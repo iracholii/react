@@ -1,5 +1,7 @@
+review_build
 node_modules
 dist
-.idea
-.VS_Code
+build
+temp
+tmp
 package-lock.json
