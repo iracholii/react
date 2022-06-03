@@ -5,7 +5,6 @@ import User from './User';
 class UsersList extends React.Component {
   state = {
     currentPage: 1,
-    totalItems: this.props.users.length,
     itemsPerPage: 3,
   };
 
@@ -22,12 +21,12 @@ class UsersList extends React.Component {
   };
 
   render() {
-    const { currentPage, totalItems, itemsPerPage } = this.state;
+    const { currentPage, itemsPerPage } = this.state;
 
     const pagination = (
       <Pagination
         itemsPerPage={itemsPerPage}
-        totalItems={totalItems}
+        totalItems={this.props.users.length}
         currentPage={currentPage}
         goPrev={this.goPrev}
         goNext={this.goNext}
