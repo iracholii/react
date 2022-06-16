@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Dimensions from './Dimentions';
+import Dimensions from './Dimensions';
 
 const App = () => {
   const [isVisible, setIsVisible] = useState(true);
